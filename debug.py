@@ -2,7 +2,7 @@ from customer import Customer
 from coffee import Coffee
 from order import Order
 
-# Sample data for testing
+
 customer1 = Customer("Ryan")
 customer2 = Customer("Gabriel")
 customer3 = Customer("Alice")
@@ -21,7 +21,7 @@ order3 = Order(customer2, coffee1, 6.0)
 order4 = Order(customer3, coffee3, 7.0)
 order5 = Order(customer4, coffee4, 3.5)
 
-# Test relationships
+
 print(f"{customer1.name}'s orders:", [o.coffee.name for o in customer1.orders()])
 print(f"{customer1.name}'s coffees:", [c.name for c in customer1.coffees()])
 print(f"{coffee1.name}'s customers:", [c.name for c in coffee1.customers()])

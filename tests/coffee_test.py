@@ -14,10 +14,10 @@ class TestCoffee:
         with pytest.raises(TypeError):
             Coffee(123)  
         with pytest.raises(ValueError):
-            Coffee("A")  # Too short
+            Coffee("A")  
         coffee = Coffee("Valid")
         with pytest.raises(AttributeError):
-            coffee.name = "New Name"  # Immutable
+            coffee.name = "New Name" 
 
     def test_orders_property(self):
         """Test orders property"""
@@ -55,4 +55,4 @@ class TestCoffee:
         Order(customer, coffee, 4.0)
         Order(customer, coffee, 6.0)
         assert coffee.average_price() == 5.0
-        assert Coffee("New").average_price() == 0  # No orders
+        assert Coffee("New").average_price() == 0

@@ -12,11 +12,11 @@ class TestCustomer:
     def test_name_validation(self):
         """Test name validation"""
         with pytest.raises(TypeError):
-            Customer(123)  # Not a string
+            Customer(123)  
         with pytest.raises(ValueError):
-            Customer("")  # Too short
+            Customer("")  
         with pytest.raises(ValueError):
-            Customer("ThisNameIsWayTooLong")  # Too long
+            Customer("ThisNameIsWayTooLong") 
 
     def test_create_order(self):
         """Test order creation"""
