@@ -5,12 +5,12 @@ from order import Order
 
 class TestCustomer:
     def test_customer_init(self):
-        """Test Customer initialization"""
+        
         customer = Customer("Alice")
         assert customer.name == "Alice"
 
     def test_name_validation(self):
-        """Test name validation"""
+        
         with pytest.raises(TypeError):
             Customer(123)  
         with pytest.raises(ValueError):
@@ -19,7 +19,7 @@ class TestCustomer:
             Customer("ThisNameIsWayTooLong") 
 
     def test_create_order(self):
-        """Test order creation"""
+    
         customer = Customer("Bob")
         coffee = Coffee("Latte")
         order = customer.create_order(coffee, 5.0)
@@ -28,7 +28,7 @@ class TestCustomer:
         assert order.price == 5.0
 
     def test_orders_property(self):
-        """Test orders property"""
+        
         customer = Customer("Charlie")
         coffee = Coffee("Espresso")
         order1 = Order(customer, coffee, 4.5)
@@ -38,7 +38,7 @@ class TestCustomer:
         assert order2 in customer.orders()
 
     def test_coffees_property(self):
-        """Test coffees property"""
+    
         customer = Customer("Dana")
         coffee1 = Coffee("Latte")
         coffee2 = Coffee("Cappuccino")

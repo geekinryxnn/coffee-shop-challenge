@@ -21,9 +21,24 @@ order3 = Order(customer2, coffee1, 6.0)
 order4 = Order(customer3, coffee3, 7.0)
 order5 = Order(customer4, coffee4, 3.5)
 
+print(f"{customer1.name} has ordered:")
+for order in customer1.orders():
+    print(f"  - {order.coffee.name} (${order.price})")
 
-print(f"{customer1.name}'s orders:", [o.coffee.name for o in customer1.orders()])
-print(f"{customer1.name}'s coffees:", [c.name for c in customer1.coffees()])
-print(f"{coffee1.name}'s customers:", [c.name for c in coffee1.customers()])
-print(f"{coffee1.name}'s order count:", coffee1.num_orders())
-print(f"{coffee1.name}'s average price:", coffee1.average_price())
+print(f"\n{customer1.name}'s favorite drinks:")
+for coffee in customer1.coffees():
+    print(f"  - {coffee.name}")
+
+print(f"\nPeople who love {coffee1.name}:")
+for customer in coffee1.customers():
+    print(f"  - {customer.name}")
+
+print(f"\n{coffee1.name} statistics:")
+print(f"  Total orders: {coffee1.num_orders()}")
+print(f"  Average price: ${coffee1.average_price():.2f}")
+
+print(f"☕ {customer1.name} has ordered:")
+for order in customer1.orders():
+    print(f"  - {order.coffee.name} (${order.price})")
+
+
