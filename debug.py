@@ -3,15 +3,23 @@ from coffee import Coffee
 from order import Order
 
 # Sample data for testing
-customer1 = Customer("Alice")
-customer2 = Customer("Bob")
+customer1 = Customer("Ryan")
+customer2 = Customer("Gabriel")
+customer3 = Customer("Alice")
+customer4 = Customer("Bob")
+customer5 = Customer("Victoria")
 
 coffee1 = Coffee("Latte")
 coffee2 = Coffee("Espresso")
+coffee3 = Coffee("Cappuccino")
+coffee4 = Coffee("Americano")
+coffee5 = Coffee("Mocha")
 
 order1 = Order(customer1, coffee1, 5.0)
 order2 = Order(customer1, coffee2, 4.5)
 order3 = Order(customer2, coffee1, 6.0)
+order4 = Order(customer3, coffee3, 7.0)
+order5 = Order(customer4, coffee4, 3.5)
 
 # Test relationships
 print(f"{customer1.name}'s orders:", [o.coffee.name for o in customer1.orders()])
