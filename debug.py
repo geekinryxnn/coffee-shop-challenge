@@ -9,7 +9,7 @@ customer3 = Customer("Alice")
 customer4 = Customer("Bob")
 customer5 = Customer("Victoria")
 
-coffee1 = Coff  ee("Latte")
+coffee1 = Coffee("Latte")
 coffee2 = Coffee("Espresso")
 coffee3 = Coffee("Cappuccino")
 coffee4 = Coffee("Americano")
