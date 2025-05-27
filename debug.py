@@ -37,7 +37,7 @@ print(f"\n{coffee1.name} statistics:")
 print(f"  Total orders: {coffee1.num_orders()}")
 print(f"  Average price: ${coffee1.average_price():.2f}")
 
-print(f"☕ {customer1.name} has ordered:")
+print(f"{customer1.name} has ordered:")
 for order in customer1.orders():
     print(f"  - {order.coffee.name} (${order.price})")
 
